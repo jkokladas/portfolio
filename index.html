@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jody Kokladas | Professional Development &amp; Instructional Design</title>
+<meta name="description" content="Jody Kokladas, Director of Professional Development and Instructional Design at Shady Side Academy.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23041E42'/><text x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23FFB81C' text-anchor='middle'>JK</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Geologica:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================
+   COLORS & FONTS: change these to restyle the whole site
+   ========================================================= */
+:root{
+  --navy:#041E42;
+  --navy-line:#2A4270;
+  --gold:#FFB81C;
+  --ground:#F6F4EE;
+  --card:#FFFFFF;
+  --border:#E2DED3;
+  --text-soft:#3D4A5C;
+  --text-muted:#5A6578;
+  --on-navy-soft:#C9D3E3;
+  --display:'Fraunces', Georgia, serif;
+  --body:'Geologica', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --max:1200px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:var(--ground);color:var(--navy);font-family:var(--body);font-size:17px;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:600;margin:0;letter-spacing:-0.01em}
+p{margin:0}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px}
+.icon{width:20px;height:20px;flex-shrink:0}
+
+/* ---------- Header ---------- */
+.site-header{position:sticky;top:0;z-index:10;background:rgba(246,244,238,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+.site-header .wrap{height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font-weight:600;font-size:17px}
+.monogram{width:40px;height:40px;border-radius:9px;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-family:var(--display);font-size:18px}
+.nav{display:flex;align-items:center;gap:32px;font-size:15px;font-weight:500}
+.nav a:hover{color:#1B3A6B}
+.nav .btn-pill{padding:11px 22px;border-radius:999px;background:var(--navy);color:#fff}
+.nav .btn-pill:hover{background:#0B2E5E;color:#fff}
+.menu-btn{display:none;width:44px;height:44px;border:1px solid #C9CFDA;border-radius:10px;background:#fff;color:var(--navy);align-items:center;justify-content:center;cursor:pointer}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;font-size:16px;font-weight:500;transition:background .15s}
+.btn-primary{background:var(--navy);color:#fff}
+.btn-primary:hover{background:#0B2E5E}
+.btn-outline{border:1.5px solid var(--navy)}
+.btn-outline:hover{background:#fff}
+
+/* ---------- Hero ---------- */
+.hero{padding:88px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.6fr 1fr;gap:64px;align-items:center}
+.kicker{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;color:var(--text-soft)}
+.kicker::before{content:"";width:10px;height:10px;border-radius:2px;background:var(--gold)}
+.hero h1{font-size:clamp(3rem,7vw,5.5rem);line-height:1;letter-spacing:-0.02em;margin:24px 0 20px}
+.hero .role{font-size:clamp(1.25rem,2vw,1.625rem);line-height:1.35}
+.hero .lede{max-width:600px;margin-top:20px;font-size:18px;line-height:1.65;font-weight:300;color:var(--text-soft)}
+.hero .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.portrait{position:relative;aspect-ratio:4/5;border-radius:20px;background:var(--navy);overflow:hidden;box-shadow:12px 12px 0 var(--gold)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+
+/* ---------- Focus strip ---------- */
+.focus{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;padding:32px 40px;background:var(--card);border:1px solid var(--border);border-radius:16px}
+.focus span{font-size:18px;font-weight:500;line-height:1.35}
+
+/* ---------- Section headings ---------- */
+.section{padding:112px 0 0}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:48px;margin-bottom:44px}
+.section-head .label{font-size:15px;font-weight:600;color:var(--text-muted);margin-bottom:12px}
+.section-head h2{font-size:clamp(2.1rem,4vw,3.25rem);line-height:1.1}
+.section-head p{max-width:420px;font-weight:300;color:var(--text-soft)}
+
+/* ---------- Work cards ---------- */
+.work-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.work-card{min-height:280px;padding:30px;border-radius:16px;background:var(--card);border:1px solid var(--border);display:flex;flex-direction:column;justify-content:space-between;gap:28px;transition:border-color .15s}
+a.work-card:hover{border-color:var(--navy)}
+.work-card .top{display:flex;justify-content:space-between;align-items:center}
+.tag{display:inline-block;padding:6px 12px;border-radius:999px;background:#EEF1F6;font-size:13px;font-weight:600}
+.work-card .kind{display:block;font-size:14px;color:var(--text-muted);margin-bottom:8px}
+.work-card h3{font-size:1.65rem;line-height:1.2}
+.work-card.featured{background:var(--navy);border-color:var(--navy);color:#fff}
+.work-card.featured .tag{background:var(--gold);color:var(--navy)}
+.work-card.featured .kind{color:var(--on-navy-soft)}
+.editions{display:flex;flex-wrap:wrap;gap:10px}
+.editions a{min-height:44px;display:inline-flex;align-items:center;padding:0 16px;border:1px solid #C9CFDA;border-radius:10px;font-size:14px;font-weight:500}
+.editions a:hover{border-color:var(--navy);background:var(--ground)}
+
+/* ---------- Presentations ---------- */
+.talks{display:grid;grid-template-columns:5fr 6fr;gap:64px;padding:72px;border-radius:24px;background:var(--navy);color:#fff}
+.talks .label{color:var(--gold);font-size:15px;font-weight:600;margin-bottom:14px}
+.talks h2{font-size:clamp(2.1rem,4vw,3.25rem);line-height:1.1}
+.talks .intro p{margin-top:16px;max-width:380px;font-weight:300;color:var(--on-navy-soft)}
+.talk-list a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--navy-line)}
+.talk-list a:last-child{border-bottom:1px solid var(--navy-line)}
+.talk-list a:hover .talk-title{color:var(--gold)}
+.talk-title{display:block;font-size:22px;font-weight:500}
+.talk-sub{display:block;font-size:14px;color:#A9B6CC}
+
+/* ---------- Credentials ---------- */
+.cred-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.cred{padding:28px;border-radius:16px;background:var(--card);border:1px solid var(--border);display:flex;flex-direction:column;gap:36px;transition:border-color .15s}
+.cred:hover{border-color:var(--navy)}
+.cred .badge{width:44px;height:44px;border-radius:10px;background:var(--gold);display:grid;place-items:center}
+.cred h3{font-family:var(--body);font-size:19px;font-weight:600;line-height:1.3}
+.cred p{font-size:15px;color:var(--text-muted);margin-top:4px}
+
+/* ---------- Footer ---------- */
+.site-footer{margin-top:112px;padding:88px 0 48px;background:var(--navy);color:#fff}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.footer-top h2{font-size:clamp(2.25rem,4.5vw,3.5rem);line-height:1.05}
+.footer-top p{margin-top:14px;font-weight:300;color:var(--on-navy-soft)}
+.footer-actions{display:flex;flex-wrap:wrap;gap:14px}
+.btn-gold{background:var(--gold);color:var(--navy);font-weight:600}
+.btn-gold:hover{background:#FFC649}
+.btn-ghost{border:1.5px solid #fff;color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:64px;padding-top:28px;border-top:1px solid var(--navy-line);font-size:14px;color:#A9B6CC}
+
+/* ---------- Tablet ---------- */
+@media (max-width:1000px){
+  .work-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cred-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .focus{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .talks{grid-template-columns:1fr;gap:32px;padding:48px}
+}
+
+/* ---------- Phone ---------- */
+@media (max-width:720px){
+  body{font-size:16px}
+  .site-header .wrap{height:68px}
+  .menu-btn{display:inline-flex}
+  .nav{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 20px;background:var(--ground);border-bottom:1px solid var(--border)}
+  .nav.open{display:flex}
+  .nav a{padding:14px 0;border-bottom:1px solid var(--border)}
+  .nav .btn-pill{margin-top:12px;text-align:center;border-bottom:0}
+  .hero{padding:40px 0 40px}
+  .hero .wrap{grid-template-columns:1fr;gap:32px}
+  .portrait{order:-1;aspect-ratio:1/1;max-width:340px;box-shadow:8px 8px 0 var(--gold)}
+  .hero .actions .btn{flex:1 1 100%}
+  .focus{padding:24px;gap:20px}
+  .focus span{font-size:15px}
+  .section{padding-top:72px}
+  .section-head{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:28px}
+  .work-grid{grid-template-columns:1fr;gap:14px}
+  .work-card{min-height:0;padding:24px}
+  .work-card h3{font-size:1.35rem}
+  .talks{padding:32px 24px;border-radius:18px}
+  .talk-title{font-size:18px}
+  .cred-grid{gap:12px}
+  .cred{padding:20px;gap:20px}
+  .cred h3{font-size:16px}
+  .cred p{display:none}
+  .site-footer{margin-top:72px;padding:56px 0 40px}
+  .footer-actions .btn{flex:1 1 100%}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- =================== HEADER =================== -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="monogram">JK</span>Jody Kokladas</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#presentations">Presentations</a>
+      <a href="#credentials">Credentials</a>
+      <a class="btn-pill" href="https://sites.google.com/site/kokladas/resume_1">Resume</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- =================== HERO =================== -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Shady Side Academy, Pittsburgh, PA</p>
+      <h1>Jody Kokladas</h1>
+      <p class="role">Director of Professional Development &amp; Instructional Design</p>
+      <p class="lede">Leading AI literacy and integration, curricular alignment, faculty onboarding and mentoring, and academy-wide professional learning across Shady Side Academy’s four PK–12 campuses.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#work">Explore my work</a>
+        <a class="btn btn-outline" href="https://sites.google.com/site/kokladas/resume_1">View resume</a>
+      </div>
+    </div>
+    <!-- Headshot: headshot.jpg must sit in the same folder as this file -->
+    <div class="portrait">
+      <img src="headshot.jpg" alt="Jody Kokladas" width="900" height="900">
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="focus" aria-label="Focus areas">
+    <span>AI Literacy &amp; Integration</span>
+    <span>Curricular Alignment</span>
+    <span>Faculty Onboarding &amp; Mentoring</span>
+    <span>Professional Learning</span>
+  </div>
+</div>
+
+<!-- =================== SELECTED WORK =================== -->
+<!-- To add a project, copy one <a class="work-card"> ... </a> block and change the link and text. -->
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="label">Selected work</p>
+        <h2>Guides, toolkits &amp; playbooks</h2>
+      </div>
+      <p>Resources built for Shady Side Academy faculty and leadership.</p>
+    </div>
+
+    <div class="work-grid">
+      <a class="work-card featured" href="https://docs.google.com/presentation/d/1NeR7Wo4hEMfB7oahuY0PKmIK8j7V3cl2anFq0TQybsU/present" target="_blank" rel="noopener">
+        <div class="top"><span class="tag">Featured</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
+        <div><span class="kind">Presentation</span><h3>Innovative Teaching &amp; Learning Leadership</h3></div>
+      </a>
+
+      <a class="work-card" href="https://sites.google.com/shadysideacademy.org/ssaaitoolkit/home" target="_blank" rel="noopener">
+        <div class="top"><span class="tag">AI Literacy</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
+        <div><span class="kind">Resource site</span><h3>SSA AI Toolkit</h3></div>
+      </a>
+
+      <a class="work-card" href="https://docs.google.com/presentation/d/1No-IUbp-b7HnlkXgCDBRnHTM5MO3B6C5P5u6zIlSmjw/present?slide=id.g8cee744244_0_770" target="_blank" rel="noopener">
+        <div class="top"><span class="tag">Onboarding</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
+        <div><span class="kind">Guide</span><h3>New Faculty Guide</h3></div>
+      </a>
+
+      <a class="work-card" href="https://bit.ly/canvasguidebook" target="_blank" rel="noopener">
+        <div class="top"><span class="tag">Instructional Tech</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
+        <div><span class="kind">Guidebook</span><h3>LMS Guide</h3></div>
+      </a>
+
+      <div class="work-card">
+        <div><span class="tag">Playbook, 3 editions</span><h3 style="margin-top:20px">SSA Distance Learning Playbook</h3></div>
+        <div class="editions">
+          <a href="https://bit.ly/3nMFd2b" target="_blank" rel="noopener">Lower School</a>
+          <a href="https://docs.google.com/presentation/d/1mLY16uKPAfkPvYZbL4OpDgqfDV-ohyfa2IBjRmaPda4/present?usp=sharing" target="_blank" rel="noopener">Middle School</a>
+          <a href="https://bit.ly/SSDLPlaybook" target="_blank" rel="noopener">Senior School</a>
+        </div>
+      </div>
+
+      <a class="work-card" href="https://sites.google.com/site/kokladas/old-website-examples" target="_blank" rel="noopener">
+        <div class="top"><span class="tag">Archive</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
+        <div><span class="kind">Collection</span><h3>Resource Websites</h3></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- =================== PRESENTATIONS =================== -->
+<section class="section" id="presentations">
+  <div class="wrap">
+    <div class="talks">
+      <div class="intro">
+        <p class="label">Speaking</p>
+        <h2>Conference presentations</h2>
+        <p>Sessions shared with independent-school and ed-tech communities.</p>
+      </div>
+      <div class="talk-list">
+        <a href="https://sites.google.com/site/kokladas/atlls-academic-conference" target="_blank" rel="noopener"><span><span class="talk-title">ATLIS Academic Conference</span><span class="talk-sub">Conference session</span></span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        <a href="https://sites.google.com/site/kokladas/index-academic-leadership-presentation" target="_blank" rel="noopener"><span><span class="talk-title">INDEX Academic Leadership</span><span class="talk-sub">Leadership presentation</span></span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        <a href="https://sites.google.com/site/kokladas/redesigned-presentation" target="_blank" rel="noopener"><span><span class="talk-title">RedesignED</span><span class="talk-sub">Presentation</span></span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+        <a href="https://sites.google.com/site/kokladas/tretc-presentation" target="_blank" rel="noopener"><span><span class="talk-title">TRETC</span><span class="talk-sub">Presentations</span></span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CREDENTIALS =================== -->
+<section class="section" id="credentials">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="label">Credentials</p>
+        <h2>Background &amp; research</h2>
+      </div>
+    </div>
+    <div class="cred-grid">
+      <a class="cred" href="https://sites.google.com/site/kokladas/teaching-certifications" target="_blank" rel="noopener">
+        <span class="badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#041E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span>
+        <span><h3>Degrees &amp; Accreditations</h3><p>Education and certifications</p></span>
+      </a>
+      <a class="cred" href="https://sites.google.com/view/kokladasistecertification/home" target="_blank" rel="noopener">
+        <span class="badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#041E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span>
+        <span><h3>ISTE Educator Certification</h3><p>Certification portfolio</p></span>
+      </a>
+      <a class="cred" href="https://sites.google.com/site/kokladas/research" target="_blank" rel="noopener">
+        <span class="badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#041E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span>
+        <span><h3>Research Paper</h3><p>Published research</p></span>
+      </a>
+      <a class="cred" href="https://sites.google.com/site/kokladas/resume_1" target="_blank" rel="noopener">
+        <span class="badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#041E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span>
+        <span><h3>Resume</h3><p>Experience and leadership</p></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- =================== FOOTER / CONTACT =================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <h2>Let’s connect.</h2>
+        <p>Collaborations, speaking invitations, and professional learning partnerships.</p>
+      </div>
+      <div class="footer-actions">
+        <a class="btn btn-gold" href="mailto:jkokladas@gmail.com">Email me</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/jkokladas/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Jody Kokladas</span>
+      <span>Shady Side Academy, Pittsburgh, PA</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  const btn = document.querySelector('.menu-btn');
+  const nav = document.getElementById('nav');
+  btn.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+  }));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
