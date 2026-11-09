@@ -60,7 +60,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.08)}
 .site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
 .brand{font-family:var(--display);font-size:1.45rem;letter-spacing:.02em;color:#fff;text-decoration:none}
-.brand span{color:var(--gold)}
+.brand span{color:#fff}
 .nav{display:flex;align-items:center;gap:28px}
 .nav a{color:#D6DEEA;text-decoration:none;font-size:15px;font-weight:500}
 .nav a:hover{color:#fff}
@@ -74,8 +74,8 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .hero::after{content:"";position:absolute;right:-12%;top:-30%;width:58%;aspect-ratio:1;border-radius:50%;border:2px solid rgba(255,184,28,.14);pointer-events:none}
 .hero > .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:64px;align-items:center;padding:88px 0 96px;position:relative;z-index:1}
 .hero .place{color:#B9C6DA;font-size:15px;margin-bottom:18px}
-.hero h1{font-family:var(--display);font-size:clamp(4rem,10.5vw,8.6rem);line-height:.9;letter-spacing:.005em;text-transform:uppercase}
-.hero h1 .last{display:block;color:#fff}
+.hero h1{color:var(--gold);font-family:var(--display);font-size:clamp(4rem,10.5vw,8.6rem);line-height:.9;letter-spacing:.005em;text-transform:uppercase}
+.hero h1 .last{display:block;color:var(--gold)}
 .hero .role{font-size:clamp(1.25rem,2.2vw,1.6rem);font-weight:500;margin-top:24px;color:#fff}
 .hero .lede{max-width:56ch;color:#C9D4E4;font-size:1.08rem;margin-top:14px;font-weight:300}
 .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
