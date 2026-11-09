@@ -1,170 +1,218 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Jody Kokladas | Education Ambassador </title>
-<meta name="description" content="Jody Kokladas, Director of Professional Development and Instructional Design at Shady Side Academy.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23041E42'/><text x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23FFB81C' text-anchor='middle'>JK</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jody Kokladas | Education Ambassador</title>
+<meta name="description" content="Jody Kokladas leads AI literacy, faculty growth, and instructional innovation across Shady Side Academy’s four PK–12 campuses in Pittsburgh, PA.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Geologica:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Geologica:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* =========================================================
-   COLORS & FONTS: change these to restyle the whole site
-   ========================================================= */
 :root{
   --navy:#041E42;
-  --navy-line:#2A4270;
+  --navy-2:#0B2D5C;
   --gold:#FFB81C;
-  --ground:#F6F4EE;
+  --gold-soft:#FFF4DA;
+  --ink:#0A1A33;
+  --muted:#4F5D73;
+  --line:#DDE3EC;
+  --bg:#FFFFFF;
+  --bg-alt:#F3F6FA;
   --card:#FFFFFF;
-  --border:#E2DED3;
-  --text-soft:#3D4A5C;
-  --text-muted:#5A6578;
-  --on-navy-soft:#C9D3E3;
-  --display:'Fraunces', Georgia, serif;
-  --body:'Geologica', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --max:1200px;
+  --link:#0B4AA2;
+  --display:"Anton","Impact","Arial Narrow Bold",sans-serif;
+  --body:"Geologica","Segoe UI",system-ui,-apple-system,sans-serif;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
 }
-
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:88px}
-body{margin:0;background:var(--ground);color:var(--navy);font-family:var(--body);font-size:17px;line-height:1.6}
+@media (prefers-color-scheme:dark){
+  :root{
+    --ink:#EAF0F8;
+    --muted:#A9B6C9;
+    --line:#22385A;
+    --bg:#06142B;
+    --bg-alt:#0A1D3B;
+    --card:#0D2344;
+    --gold-soft:#2A2410;
+    --link:#FFC94D;
+    color-scheme:dark;
+  }
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
-h1,h2,h3{font-family:var(--display);font-weight:600;margin:0;letter-spacing:-0.01em}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1160px,100% - 48px);margin-inline:auto}
+h1,h2,h3{margin:0;font-weight:400}
+h2{font-family:var(--display);font-size:clamp(2.2rem,4.5vw,3.4rem);line-height:1.02;letter-spacing:.005em;color:var(--ink)}
+h3{font-family:var(--body);font-weight:600;font-size:1.12rem;line-height:1.3}
 p{margin:0}
-.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px}
-.icon{width:20px;height:20px;flex-shrink:0}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:16px;top:16px;z-index:100;background:var(--gold);color:var(--navy);padding:10px 16px;border-radius:6px}
 
 /* ---------- Header ---------- */
-.site-header{position:sticky;top:0;z-index:10;background:rgba(246,244,238,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-.site-header .wrap{height:76px;display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:12px;font-weight:600;font-size:17px}
-.monogram{width:40px;height:40px;border-radius:9px;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-family:var(--display);font-size:18px}
-.nav{display:flex;align-items:center;gap:32px;font-size:15px;font-weight:500}
-.nav a:hover{color:#1B3A6B}
-.nav .btn-pill{padding:11px 22px;border-radius:999px;background:var(--navy);color:#fff}
-.nav .btn-pill:hover{background:#0B2E5E;color:#fff}
-.menu-btn{display:none;width:44px;height:44px;border:1px solid #C9CFDA;border-radius:10px;background:#fff;color:var(--navy);align-items:center;justify-content:center;cursor:pointer}
-
-/* ---------- Buttons ---------- */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;font-size:16px;font-weight:500;transition:background .15s}
-.btn-primary{background:var(--navy);color:#fff}
-.btn-primary:hover{background:#0B2E5E}
-.btn-outline{border:1.5px solid var(--navy)}
-.btn-outline:hover{background:#fff}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--navy)}
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.08)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{font-family:var(--display);font-size:1.45rem;letter-spacing:.02em;color:#fff;text-decoration:none}
+.brand span{color:var(--gold)}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a{color:#D6DEEA;text-decoration:none;font-size:15px;font-weight:500}
+.nav a:hover{color:#fff}
+.nav .nav-cta{background:var(--gold);color:var(--navy);padding:9px 18px;border-radius:999px;font-weight:600}
+.nav .nav-cta:hover{color:var(--navy);background:#FFC94D}
+.menu-btn{display:none;background:none;border:0;color:#fff;padding:8px;cursor:pointer}
+.menu-btn svg{width:26px;height:26px}
 
 /* ---------- Hero ---------- */
-.hero{padding:88px 0 72px}
-.hero .wrap{display:grid;grid-template-columns:1.6fr 1fr;gap:64px;align-items:center}
-.kicker{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:500;color:var(--text-soft)}
-.kicker::before{content:"";width:10px;height:10px;border-radius:2px;background:var(--gold)}
-.hero h1{font-size:clamp(3rem,7vw,5.5rem);line-height:1;letter-spacing:-0.02em;margin:24px 0 20px}
-.hero .role{font-size:clamp(1.25rem,2vw,1.625rem);line-height:1.35}
-.hero .lede{max-width:600px;margin-top:20px;font-size:18px;line-height:1.65;font-weight:300;color:var(--text-soft)}
-.hero .actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
-.portrait{position:relative;aspect-ratio:4/5;border-radius:20px;background:var(--navy);overflow:hidden;box-shadow:12px 12px 0 var(--gold)}
-.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-12%;top:-30%;width:58%;aspect-ratio:1;border-radius:50%;border:2px solid rgba(255,184,28,.14);pointer-events:none}
+.hero > .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:64px;align-items:center;padding:88px 0 96px;position:relative;z-index:1}
+.hero .place{color:#B9C6DA;font-size:15px;margin-bottom:18px}
+.hero h1{font-family:var(--display);font-size:clamp(4rem,10.5vw,8.6rem);line-height:.9;letter-spacing:.005em;text-transform:uppercase}
+.hero h1 .last{display:block;color:var(--gold)}
+.hero .role{font-size:clamp(1.25rem,2.2vw,1.6rem);font-weight:500;margin-top:24px;color:#fff}
+.hero .lede{max-width:56ch;color:#C9D4E4;font-size:1.08rem;margin-top:14px;font-weight:300}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:600;font-size:15.5px;text-decoration:none;transition:background .2s,color .2s,border-color .2s}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:#FFC94D}
+.btn-line{border:1.5px solid rgba(255,255,255,.45);color:#fff}
+.btn-line:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.portrait{position:relative;justify-self:end;width:min(100%,360px)}
+.portrait::before{content:"";position:absolute;inset:18px -18px -18px 18px;background:var(--gold);border-radius:22px}
+.portrait .frame{position:relative;aspect-ratio:4/5;border-radius:22px;overflow:hidden;background:var(--navy-2);display:grid;place-items:center}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.portrait .mono{font-family:var(--display);font-size:7rem;color:var(--gold);display:none}
+.portrait .frame.no-photo .mono{display:block}
 
-/* ---------- Focus strip ---------- */
-.focus{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;padding:32px 40px;background:var(--card);border:1px solid var(--border);border-radius:16px}
-.focus span{font-size:18px;font-weight:500;line-height:1.35}
+.focus{background:var(--navy-2);color:#E6ECF5}
+.focus ul{list-style:none;margin:0;padding:22px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.focus li{font-size:15px;font-weight:500;padding-left:14px;border-left:3px solid var(--gold);line-height:1.35}
 
-/* ---------- Section headings ---------- */
-.section{padding:112px 0 0}
-.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:48px;margin-bottom:44px}
-.section-head .label{font-size:15px;font-weight:600;color:var(--text-muted);margin-bottom:12px}
-.section-head h2{font-size:clamp(2.1rem,4vw,3.25rem);line-height:1.1}
-.section-head p{max-width:420px;font-weight:300;color:var(--text-soft)}
+/* ---------- Sections ---------- */
+section.block{padding:104px 0}
+section.alt{background:var(--bg-alt)}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;margin-bottom:52px}
+.head p{color:var(--muted);max-width:52ch;font-size:1.05rem}
 
-/* ---------- Work cards ---------- */
-.work-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-.work-card{min-height:280px;padding:30px;border-radius:16px;background:var(--card);border:1px solid var(--border);display:flex;flex-direction:column;justify-content:space-between;gap:28px;transition:border-color .15s}
-a.work-card:hover{border-color:var(--navy)}
-.work-card .top{display:flex;justify-content:space-between;align-items:center}
-.tag{display:inline-block;padding:6px 12px;border-radius:999px;background:#EEF1F6;font-size:13px;font-weight:600}
-.work-card .kind{display:block;font-size:14px;color:var(--text-muted);margin-bottom:8px}
-.work-card h3{font-size:1.65rem;line-height:1.2}
-.work-card.featured{background:var(--navy);border-color:var(--navy);color:#fff}
-.work-card.featured .tag{background:var(--gold);color:var(--navy)}
-.work-card.featured .kind{color:var(--on-navy-soft)}
-.editions{display:flex;flex-wrap:wrap;gap:10px}
-.editions a{min-height:44px;display:inline-flex;align-items:center;padding:0 16px;border:1px solid #C9CFDA;border-radius:10px;font-size:14px;font-weight:500}
-.editions a:hover{border-color:var(--navy);background:var(--ground)}
+/* ---------- Initiatives ---------- */
+.spotlight{display:grid;grid-template-columns:.9fr 1.6fr;background:var(--card);border:1px solid var(--line);border-radius:26px;overflow:hidden}
+.spot-intro{background:var(--navy);color:#fff;padding:44px 40px;display:flex;flex-direction:column;gap:18px}
+.spot-intro .kind{color:var(--gold);font-weight:600;font-size:15px}
+.spot-intro h3{font-family:var(--display);font-weight:400;font-size:2.4rem;line-height:1.02}
+.spot-intro p{color:#C9D4E4;font-weight:300}
+.spot-intro .btn{margin-top:auto;align-self:flex-start}
+.spot-list{list-style:none;margin:0;padding:20px 40px;display:grid;grid-template-columns:1fr 1fr;column-gap:40px}
+.spot-list li{padding:20px 0;border-bottom:1px solid var(--line)}
+.spot-list li:nth-last-child(-n+2){border-bottom:0}
+.spot-list h4{margin:0 0 4px;font-size:1.02rem;font-weight:600}
+.spot-list p{color:var(--muted);font-size:.95rem;line-height:1.5}
+.spot-list .now{display:inline-block;background:var(--gold-soft);color:var(--ink);font-size:12.5px;font-weight:600;padding:2px 10px;border-radius:999px;margin-left:6px;vertical-align:2px}
 
-/* ---------- Presentations ---------- */
-.talks{display:grid;grid-template-columns:5fr 6fr;gap:64px;padding:72px;border-radius:24px;background:var(--navy);color:#fff}
-.talks .label{color:var(--gold);font-size:15px;font-weight:600;margin-bottom:14px}
-.talks h2{font-size:clamp(2.1rem,4vw,3.25rem);line-height:1.1}
-.talks .intro p{margin-top:16px;max-width:380px;font-weight:300;color:var(--on-navy-soft)}
-.talk-list a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 0;border-top:1px solid var(--navy-line)}
-.talk-list a:last-child{border-bottom:1px solid var(--navy-line)}
-.talk-list a:hover .talk-title{color:var(--gold)}
-.talk-title{display:block;font-size:22px;font-weight:500}
-.talk-sub{display:block;font-size:14px;color:#A9B6CC}
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+.pillar{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--gold);border-radius:6px 6px 22px 22px;padding:36px 36px 28px}
+.pillar > h3{font-family:var(--display);font-weight:400;font-size:1.9rem;line-height:1.05;margin-bottom:6px}
+.pillar > p{color:var(--muted);margin-bottom:12px}
+.pillar ul{list-style:none;margin:0;padding:0}
+.pillar li{padding:16px 0;border-top:1px solid var(--line)}
+.pillar li h4{margin:0 0 3px;font-size:1rem;font-weight:600}
+.pillar li p{color:var(--muted);font-size:.94rem;line-height:1.5}
+.pillar li a{font-weight:600;font-size:.92rem;text-decoration:none}
+.pillar li a:hover{text-decoration:underline}
+.links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:6px}
 
-/* ---------- Credentials ---------- */
-.cred-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
-.cred{padding:28px;border-radius:16px;background:var(--card);border:1px solid var(--border);display:flex;flex-direction:column;gap:36px;transition:border-color .15s}
-.cred:hover{border-color:var(--navy)}
-.cred .badge{width:44px;height:44px;border-radius:10px;background:var(--gold);display:grid;place-items:center}
-.cred h3{font-family:var(--body);font-size:19px;font-weight:600;line-height:1.3}
-.cred p{font-size:15px;color:var(--text-muted);margin-top:4px}
+.feature{margin-top:28px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background:var(--gold);color:var(--navy);border-radius:22px;padding:30px 36px}
+.feature p{font-weight:500}
+.feature strong{display:block;font-family:var(--display);font-weight:400;font-size:1.7rem;line-height:1.1}
+.feature .btn{background:var(--navy);color:#fff}
+.feature .btn:hover{background:var(--navy-2)}
+
+/* ---------- Career ---------- */
+.career{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
+.career .bio p{color:var(--muted);margin-top:18px;max-width:46ch}
+.timeline{list-style:none;margin:0;padding:0;position:relative}
+.timeline::before{content:"";position:absolute;left:9px;top:10px;bottom:10px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding:0 0 34px 44px}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:0;top:6px;width:20px;height:20px;border-radius:50%;background:var(--bg);border:3px solid var(--navy)}
+@media (prefers-color-scheme:dark){.timeline li::before{border-color:#7F9CC7}}
+.timeline li.current::before{background:var(--gold);border-color:var(--gold)}
+.timeline .org{color:var(--muted);font-size:.95rem;margin-top:2px}
+.timeline p.what{margin-top:8px;font-size:.98rem}
+
+/* ---------- Speaking ---------- */
+.talks{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.talk-panel{border-radius:22px;padding:34px 36px}
+.talk-panel.dark{background:var(--navy);color:#fff}
+.talk-panel.light{background:var(--card);border:1px solid var(--line)}
+.talk-panel h3{font-size:1.05rem;margin-bottom:10px}
+.talk-panel.dark h3{color:var(--gold)}
+.talk-panel ul{list-style:none;margin:0;padding:0}
+.talk-panel li{border-top:1px solid var(--line);padding:14px 0}
+.talk-panel.dark li{border-color:rgba(255,255,255,.14)}
+.talk-panel a{display:flex;justify-content:space-between;align-items:center;gap:16px;color:inherit;text-decoration:none;font-weight:500;font-size:1.05rem}
+.talk-panel a:hover span:first-child{text-decoration:underline}
+.talk-panel a svg{width:18px;height:18px;flex:none;color:var(--gold)}
+.talk-panel .sub{display:block;color:var(--muted);font-size:.92rem;font-weight:400}
+.talk-panel.dark .sub{color:#B9C6DA}
+
+/* ---------- Recognition ---------- */
+.awards{display:grid;grid-template-columns:repeat(6,1fr);gap:24px}
+.award{grid-column:span 2}
+.award.wide{grid-column:span 3}
+.award{padding:32px;border-radius:22px;background:var(--card);border:1px solid var(--line)}
+.award .medal{width:46px;height:46px;border-radius:50%;background:var(--gold);display:grid;place-items:center;margin-bottom:20px}
+.award .medal svg{width:24px;height:24px;color:var(--navy)}
+.award h3{font-size:1.15rem}
+.award p{color:var(--muted);font-size:.95rem;margin-top:6px}
+.creds{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+.creds a{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);text-decoration:none;font-weight:500;font-size:15px}
+.creds a:hover{border-color:var(--gold)}
 
 /* ---------- Footer ---------- */
-.site-footer{margin-top:112px;padding:88px 0 48px;background:var(--navy);color:#fff}
-.footer-top{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap}
-.footer-top h2{font-size:clamp(2.25rem,4.5vw,3.5rem);line-height:1.05}
-.footer-top p{margin-top:14px;font-weight:300;color:var(--on-navy-soft)}
-.footer-actions{display:flex;flex-wrap:wrap;gap:14px}
-.btn-gold{background:var(--gold);color:var(--navy);font-weight:600}
-.btn-gold:hover{background:#FFC649}
-.btn-ghost{border:1.5px solid #fff;color:#fff}
-.btn-ghost:hover{background:rgba(255,255,255,.08)}
-.footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:64px;padding-top:28px;border-top:1px solid var(--navy-line);font-size:14px;color:#A9B6CC}
+.site-footer{background:var(--navy);color:#fff;padding:88px 0 40px}
+.footer-top{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:end}
+.site-footer h2{color:#fff;font-size:clamp(2.6rem,6vw,4.6rem)}
+.site-footer .footer-top p{color:#C9D4E4;margin-top:14px;max-width:46ch}
+.footer-actions{display:flex;flex-wrap:wrap;gap:14px;justify-content:flex-end}
+.footer-bottom{margin-top:64px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#93A3BB;font-size:14px}
 
-/* ---------- Tablet ---------- */
-@media (max-width:1000px){
-  .work-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .cred-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .focus{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .talks{grid-template-columns:1fr;gap:32px;padding:48px}
+/* ---------- Responsive ---------- */
+@media (max-width:980px){
+  .hero > .wrap{grid-template-columns:1fr;gap:56px;padding:64px 0 80px}
+  .portrait{justify-self:start;width:min(80%,320px)}
+  .focus ul{grid-template-columns:1fr 1fr}
+  .head,.career,.footer-top{grid-template-columns:1fr;gap:20px}
+  .spotlight{grid-template-columns:1fr}
+  .pillars,.talks{grid-template-columns:1fr}
+  .awards{grid-template-columns:1fr 1fr}
+  .award,.award.wide{grid-column:auto}
+  .footer-actions{justify-content:flex-start}
+  .career{gap:44px}
 }
-
-/* ---------- Phone ---------- */
-@media (max-width:720px){
-  body{font-size:16px}
-  .site-header .wrap{height:68px}
-  .menu-btn{display:inline-flex}
-  .nav{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;padding:8px 24px 20px;background:var(--ground);border-bottom:1px solid var(--border)}
+@media (max-width:760px){
+  .menu-btn{display:block}
+  .nav{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--navy);padding:8px 24px 20px;border-bottom:1px solid rgba(255,255,255,.1)}
   .nav.open{display:flex}
-  .nav a{padding:14px 0;border-bottom:1px solid var(--border)}
-  .nav .btn-pill{margin-top:12px;text-align:center;border-bottom:0}
-  .hero{padding:40px 0 40px}
-  .hero .wrap{grid-template-columns:1fr;gap:32px}
-  .portrait{order:-1;aspect-ratio:1/1;max-width:340px;box-shadow:8px 8px 0 var(--gold)}
-  .hero .actions .btn{flex:1 1 100%}
-  .focus{padding:24px;gap:20px}
-  .focus span{font-size:15px}
-  .section{padding-top:72px}
-  .section-head{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:28px}
-  .work-grid{grid-template-columns:1fr;gap:14px}
-  .work-card{min-height:0;padding:24px}
-  .work-card h3{font-size:1.35rem}
-  .talks{padding:32px 24px;border-radius:18px}
-  .talk-title{font-size:18px}
-  .cred-grid{gap:12px}
-  .cred{padding:20px;gap:20px}
-  .cred h3{font-size:16px}
-  .cred p{display:none}
-  .site-footer{margin-top:72px;padding:56px 0 40px}
-  .footer-actions .btn{flex:1 1 100%}
+  .nav a{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+  .nav .nav-cta{margin-top:14px;text-align:center;border-bottom:0}
+  .spot-list{grid-template-columns:1fr;padding:8px 26px}
+  .spot-list li:nth-last-child(2){border-bottom:1px solid var(--line)}
+  .spot-intro,.pillar,.talk-panel{padding:30px 26px}
+  .awards{grid-template-columns:1fr}
+  section.block{padding:76px 0}
+  .feature{padding:26px}
 }
-
+@media (max-width:480px){
+  .wrap{width:min(1160px,100% - 36px)}
+  .focus ul{grid-template-columns:1fr;gap:14px}
+}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *{transition:none!important}
@@ -172,177 +220,271 @@ a.work-card:hover{border-color:var(--navy)}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<!-- =================== HEADER =================== -->
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="#top"><span class="monogram">JK</span>Jody Kokladas</a>
+    <a class="brand" href="#top">JODY <span>KOKLADAS</span></a>
     <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
-      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <nav class="nav" id="nav" aria-label="Primary">
-      <a href="#work">Work</a>
-      <a href="#presentations">Presentations</a>
-      <a href="#credentials">Credentials</a>
-      <a class="btn-pill" href="https://sites.google.com/site/kokladas/resume_1">Resume</a>
+      <a href="#initiatives">Initiatives</a>
+      <a href="#career">Career</a>
+      <a href="#speaking">Speaking</a>
+      <a href="#recognition">Recognition</a>
+      <a class="nav-cta" href="https://sites.google.com/site/kokladas/resume_1" target="_blank" rel="noopener">Resume</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
+<main id="main">
 
-<!-- =================== HERO =================== -->
-<section class="hero">
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
   <div class="wrap">
     <div>
-      <p class="kicker">Shady Side Academy, Pittsburgh, PA</p>
-      <h1>Jody Kokladas</h1>
-      <p class="role">Director of Professional Development &amp; Instructional Design</p>
-      <p class="lede">Leading AI literacy and integration, curricular alignment, faculty onboarding and mentoring, and academy-wide professional learning across Shady Side Academy’s four PK–12 campuses.</p>
+      <p class="place">Shady Side Academy, Pittsburgh, Pennsylvania</p>
+      <h1>Jody <span class="last">Kokladas</span></h1>
+      <p class="role">Education Ambassador</p>
+      <p class="lede">I lead AI literacy, faculty growth, and instructional innovation across Shady Side Academy’s four PK–12 campuses, helping educators turn new ideas into everyday practice.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="#work">Explore my work</a>
-        <a class="btn btn-outline" href="https://sites.google.com/site/kokladas/resume_1">View resume</a>
+        <a class="btn btn-gold" href="#initiatives">See my initiatives</a>
+        <a class="btn btn-line" href="https://sites.google.com/site/kokladas/resume_1" target="_blank" rel="noopener">View resume</a>
       </div>
     </div>
-    <!-- Headshot: headshot.jpg must sit in the same folder as this file -->
+    <!-- Photo: keep headshot.jpg in the same folder as this file. If it is missing, a JK monogram shows instead. -->
     <div class="portrait">
-      <img src="headshot.jpg" alt="Jody Kokladas" width="900" height="900">
+      <div class="frame">
+        <img src="headshot.jpg" alt="Portrait of Jody Kokladas" onerror="this.remove();document.querySelector('.portrait .frame').classList.add('no-photo')">
+        <span class="mono" aria-hidden="true">JK</span>
+      </div>
+    </div>
+  </div>
+  <div class="focus">
+    <div class="wrap">
+      <ul aria-label="Areas of focus">
+        <li>AI literacy &amp; integration</li>
+        <li>Curricular alignment</li>
+        <li>Faculty onboarding &amp; mentoring</li>
+        <li>Academy-wide professional learning</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<div class="wrap">
-  <div class="focus" aria-label="Focus areas">
-    <span>AI Literacy &amp; Integration</span>
-    <span>Curricular Alignment</span>
-    <span>Faculty Onboarding &amp; Mentoring</span>
-    <span>Professional Learning</span>
-  </div>
-</div>
-
-<!-- =================== SELECTED WORK =================== -->
-<!-- To add a project, copy one <a class="work-card"> ... </a> block and change the link and text. -->
-<section class="section" id="work">
+<!-- ================= INITIATIVES ================= -->
+<section class="block" id="initiatives">
   <div class="wrap">
-    <div class="section-head">
-      <div>
-        <p class="label">Selected work</p>
-        <h2>Guides, toolkits &amp; playbooks</h2>
-      </div>
-      <p>Resources built for Shady Side Academy faculty and leadership.</p>
+    <div class="head">
+      <h2>Initiatives I’ve led</h2>
+      <p>Programs, frameworks, and resources I’ve designed and launched with colleagues, students, and school leaders across every division.</p>
     </div>
 
-    <div class="work-grid">
-      <a class="work-card featured" href="https://docs.google.com/presentation/d/1NeR7Wo4hEMfB7oahuY0PKmIK8j7V3cl2anFq0TQybsU/present" target="_blank" rel="noopener">
-        <div class="top"><span class="tag">Featured</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
-        <div><span class="kind">Presentation</span><h3>Innovative Teaching &amp; Learning Leadership</h3></div>
-      </a>
+    <!-- AI spotlight -->
+    <div class="spotlight">
+      <div class="spot-intro">
+        <span class="kind">Spotlight</span>
+        <h3>AI literacy across a PK–12 academy</h3>
+        <p>A coordinated, school-wide approach to AI, from shared guidelines for every grade to student voice and hands-on pilots in classrooms.</p>
+        <a class="btn btn-gold" href="https://sites.google.com/shadysideacademy.org/ssaaitoolkit/home" target="_blank" rel="noopener">Open the SSA AI Toolkit</a>
+      </div>
+      <ul class="spot-list">
+        <li><h4>SSA AI Use Continuum</h4><p>A co-created framework giving faculty and students a shared language for levels of AI use.</p></li>
+        <li><h4>PK–12 AI Guidelines &amp; Guardrails</h4><p>Academy-wide guidance for responsible AI use, written for every division.</p></li>
+        <li><h4>SSA AI Toolkit</h4><p>A living resource hub for faculty, updated as tools and practice evolve.</p></li>
+        <li><h4>AI Revolution Immersive</h4><p>An immersive professional learning experience on AI for educators.</p></li>
+        <li><h4>Cross-divisional AI Pilots</h4><p>Classroom pilots testing AI use across divisions and disciplines.</p></li>
+        <li><h4>AI Student Advisory Board</h4><p>Bringing student perspective directly into the academy’s AI decisions.</p></li>
+        <li><h4>AI Explorations <span class="now">2026–27 pilot</span></h4><p>An opt-in course for ninth graders covering foundations, ethics, leadership, application, and impact.</p></li>
+        <li><h4>ISTE+ASCD &amp; Harvard AI challenge teams</h4><p>Collaborating with educators beyond SSA on AI in education.</p></li>
+      </ul>
+    </div>
 
-      <a class="work-card" href="https://sites.google.com/shadysideacademy.org/ssaaitoolkit/home" target="_blank" rel="noopener">
-        <div class="top"><span class="tag">AI Literacy</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
-        <div><span class="kind">Resource site</span><h3>SSA AI Toolkit</h3></div>
-      </a>
-
-      <a class="work-card" href="https://docs.google.com/presentation/d/1No-IUbp-b7HnlkXgCDBRnHTM5MO3B6C5P5u6zIlSmjw/present?slide=id.g8cee744244_0_770" target="_blank" rel="noopener">
-        <div class="top"><span class="tag">Onboarding</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
-        <div><span class="kind">Guide</span><h3>New Faculty Guide</h3></div>
-      </a>
-
-      <a class="work-card" href="https://bit.ly/canvasguidebook" target="_blank" rel="noopener">
-        <div class="top"><span class="tag">Instructional Tech</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
-        <div><span class="kind">Guidebook</span><h3>LMS Guide</h3></div>
-      </a>
-
-      <div class="work-card">
-        <div><span class="tag">Playbook, 3 editions</span><h3 style="margin-top:20px">SSA Distance Learning Playbook</h3></div>
-        <div class="editions">
-          <a href="https://bit.ly/3nMFd2b" target="_blank" rel="noopener">Lower School</a>
-          <a href="https://docs.google.com/presentation/d/1mLY16uKPAfkPvYZbL4OpDgqfDV-ohyfa2IBjRmaPda4/present?usp=sharing" target="_blank" rel="noopener">Middle School</a>
-          <a href="https://bit.ly/SSDLPlaybook" target="_blank" rel="noopener">Senior School</a>
-        </div>
+    <div class="pillars">
+      <div class="pillar">
+        <h3>Faculty growth</h3>
+        <p>Helping educators feel welcome, supported, and inspired to keep learning.</p>
+        <ul>
+          <li>
+            <h4>New faculty onboarding &amp; mentor program</h4>
+            <p>A mentor team and onboarding experience grounded in a “leading with grace” philosophy.</p>
+            <div class="links"><a href="https://docs.google.com/presentation/d/1No-IUbp-b7HnlkXgCDBRnHTM5MO3B6C5P5u6zIlSmjw/present?slide=id.g8cee744244_0_770" target="_blank" rel="noopener">New Faculty Guide</a></div>
+          </li>
+          <li>
+            <h4>Academy-wide professional learning</h4>
+            <p>PD programming for faculty and staff, including sessions on teaming and school culture.</p>
+          </li>
+          <li>
+            <h4>Benedum grants &amp; fellowships</h4>
+            <p>Advising colleagues on Benedum Professional Development Grants and Teaching Fellowships.</p>
+          </li>
+        </ul>
       </div>
 
-      <a class="work-card" href="https://sites.google.com/site/kokladas/old-website-examples" target="_blank" rel="noopener">
-        <div class="top"><span class="tag">Archive</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></div>
-        <div><span class="kind">Collection</span><h3>Resource Websites</h3></div>
-      </a>
+      <div class="pillar">
+        <h3>Teaching &amp; learning innovation</h3>
+        <p>Practical tools that help teachers adopt new approaches with confidence.</p>
+        <ul>
+          <li>
+            <h4>SSA Distance Learning Playbook</h4>
+            <p>Division-specific playbooks that guided the academy’s shift to remote teaching.</p>
+            <div class="links">
+              <a href="https://bit.ly/3nMFd2b" target="_blank" rel="noopener">Lower School</a>
+              <a href="https://docs.google.com/presentation/d/1mLY16uKPAfkPvYZbL4OpDgqfDV-ohyfa2IBjRmaPda4/present?usp=sharing" target="_blank" rel="noopener">Middle School</a>
+              <a href="https://bit.ly/SSDLPlaybook" target="_blank" rel="noopener">Senior School</a>
+            </div>
+          </li>
+          <li>
+            <h4>LMS Guidebook</h4>
+            <p>Step-by-step Canvas guidance for teachers and families.</p>
+            <div class="links"><a href="https://bit.ly/canvasguidebook" target="_blank" rel="noopener">Open the guidebook</a></div>
+          </li>
+          <li>
+            <h4>STEM, maker spaces &amp; computer science</h4>
+            <p>STEM and digital literacy programming aligned to ISTE, CSTA, and NGSS standards, with coding lessons co-taught inside classroom curriculum.</p>
+            <div class="links"><a href="https://sites.google.com/site/kokladas/old-website-examples" target="_blank" rel="noopener">Resource website archive</a></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="feature">
+      <p><strong>Innovative Teaching &amp; Learning Leadership</strong>A presentation on my leadership approach and the work behind it.</p>
+      <a class="btn" href="https://docs.google.com/presentation/d/1NeR7Wo4hEMfB7oahuY0PKmIK8j7V3cl2anFq0TQybsU/present" target="_blank" rel="noopener">View presentation</a>
     </div>
   </div>
 </section>
 
-<!-- =================== PRESENTATIONS =================== -->
-<section class="section" id="presentations">
+<!-- ================= CAREER ================= -->
+<section class="block alt" id="career">
+  <div class="wrap career">
+    <div class="bio">
+      <h2>Background</h2>
+      <p>My career has moved from the classroom to instructional coaching to academy-wide leadership. Along the way I’ve stayed focused on the same question: how can we enhance student voice and opportunity by helping faculty grow and feel empowered?</p>
+      <p>Today I bring that question to AI literacy, curricular alignment, and the way we welcome and grow faculty.</p>
+    </div>
+    <!-- Edit titles here as needed. Add a new <li> at the top for future roles. -->
+    <ol class="timeline" reversed>
+      <li class="current">
+        <h3>Director of Professional Development &amp; Instructional Design</h3>
+        <p class="org">Shady Side Academy, Pittsburgh, PA</p>
+        <p class="what">Leading AI literacy and integration, curricular alignment, faculty onboarding and mentoring, and professional learning across four PK–12 campuses.</p>
+      </li>
+      <li>
+        <h3>Innovative Teaching &amp; Learning Lead</h3>
+        <p class="org">Shady Side Academy</p>
+        <p class="what">Led PK–12 STEM and digital literacy work aligned to ISTE and CSTA standards, and the academy’s distance learning playbooks.</p>
+      </li>
+      <li>
+        <h3>Technology Integration Specialist</h3>
+        <p class="org">Shady Side Academy</p>
+        <p class="what">Partnered with teachers to bring technology, STEAM, and design thinking into classroom instruction.</p>
+      </li>
+      <li>
+        <h3>Instructional Technology Facilitator</h3>
+        <p class="org">Davidson County Schools, North Carolina</p>
+        <p class="what">Built STEM programming and maker spaces aligned to CSTA and NGSS standards, and co-taught coding lessons across grade levels.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= SPEAKING ================= -->
+<section class="block" id="speaking">
   <div class="wrap">
+    <div class="head">
+      <h2>Speaking &amp; leadership forums</h2>
+      <p>Sessions shared with independent-school, ed-tech, and academic leadership communities.</p>
+    </div>
     <div class="talks">
-      <div class="intro">
-        <p class="label">Speaking</p>
-        <h2>Conference presentations</h2>
-        <p>Sessions shared with independent-school and ed-tech communities.</p>
+      <div class="talk-panel dark">
+        <h3>Featured presentations</h3>
+        <ul>
+          <li><a href="https://sites.google.com/site/kokladas/atlls-academic-conference" target="_blank" rel="noopener"><span>ATLIS Academic Conference<span class="sub">Conference session</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+          <li><a href="https://sites.google.com/site/kokladas/index-academic-leadership-presentation" target="_blank" rel="noopener"><span>INDEX Academic Leadership<span class="sub">Leadership presentation</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+          <li><a href="https://sites.google.com/site/kokladas/redesigned-presentation" target="_blank" rel="noopener"><span>RedesignED<span class="sub">Presentation</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+          <li><a href="https://sites.google.com/site/kokladas/tretc-presentation" target="_blank" rel="noopener"><span>TRETC<span class="sub">Three Rivers Educational Technology Conference</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></li>
+        </ul>
       </div>
-      <div class="talk-list">
-        <a href="https://sites.google.com/site/kokladas/atlls-academic-conference" target="_blank" rel="noopener"><span><span class="talk-title">ATLIS Academic Conference</span><span class="talk-sub">Conference session</span></span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-        <a href="https://sites.google.com/site/kokladas/index-academic-leadership-presentation" target="_blank" rel="noopener"><span><span class="talk-title">INDEX Academic Leadership</span><span class="talk-sub">Leadership presentation</span></span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-        <a href="https://sites.google.com/site/kokladas/redesigned-presentation" target="_blank" rel="noopener"><span><span class="talk-title">RedesignED</span><span class="talk-sub">Presentation</span></span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
-        <a href="https://sites.google.com/site/kokladas/tretc-presentation" target="_blank" rel="noopener"><span><span class="talk-title">TRETC</span><span class="talk-sub">Presentations</span></span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+      <div class="talk-panel light">
+        <h3>Also presented at</h3>
+        <ul>
+          <li><span>EdTechTeacher Innovation Summit<span class="sub">Mastering Your Teaching Superpowers</span></span></li>
+          <li><span>PETE&amp;C<span class="sub">Pennsylvania Educational Technology Expo &amp; Conference</span></span></li>
+          <li><span>NCTIES<span class="sub">North Carolina Technology in Education Society</span></span></li>
+          <li><span>SSA Tech &amp; Learning<span class="sub">Shady Side Academy</span></span></li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- =================== CREDENTIALS =================== -->
-<section class="section" id="credentials">
+<!-- ================= RECOGNITION ================= -->
+<section class="block alt" id="recognition">
   <div class="wrap">
-    <div class="section-head">
-      <div>
-        <p class="label">Credentials</p>
-        <h2>Background &amp; research</h2>
+    <div class="head">
+      <h2>Recognition &amp; credentials</h2>
+      <p>Honors from colleagues and the field, plus the certifications and research behind my practice.</p>
+    </div>
+    <div class="awards">
+      <div class="award">
+        <span class="medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span>
+        <h3>PAECT Outstanding Leader of the Year</h3>
+        <p>Pennsylvania Association for Educational Communications and Technology, 2020.</p>
+      </div>
+      <div class="award">
+        <span class="medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/></svg></span>
+        <h3>Ruth F. Walters Service Award</h3>
+        <p>Recognizing service to colleagues and the school community.</p>
+      </div>
+      <div class="award">
+        <span class="medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6z"/></svg></span>
+        <h3>ISTE Certified EdTech Leader</h3>
+        <p>International Society for Technology in Education certification.</p>
+      </div>
+      <div class="award wide">
+        <span class="medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9.5" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15 14.6c3 .1 5.5 2.4 6 5.4"/></svg></span>
+        <h3>CoSN Driving K-12 Innovation Board</h3>
+        <p>Consortium for School Networking board member.</p>
+      </div>
+      <div class="award wide">
+        <span class="medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 20h20M5 20V10l7-5 7 5v10M10 20v-5h4v5"/></svg></span>
+        <h3>ISTE+ASCD Chief Instructional Leader</h3>
+        <p>Recognized by ISTE+ASCD for instructional leadership.</p>
       </div>
     </div>
-    <div class="cred-grid">
-      <a class="cred" href="https://sites.google.com/site/kokladas/teaching-certifications" target="_blank" rel="noopener">
-        <span class="badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#041E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span>
-        <span><h3>Degrees &amp; Accreditations</h3><p>Education and certifications</p></span>
-      </a>
-      <a class="cred" href="https://sites.google.com/view/kokladasistecertification/home" target="_blank" rel="noopener">
-        <span class="badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#041E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg></span>
-        <span><h3>ISTE Educator Certification</h3><p>Certification portfolio</p></span>
-      </a>
-      <a class="cred" href="https://sites.google.com/site/kokladas/research" target="_blank" rel="noopener">
-        <span class="badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#041E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span>
-        <span><h3>Research Paper</h3><p>Published research</p></span>
-      </a>
-      <a class="cred" href="https://sites.google.com/site/kokladas/resume_1" target="_blank" rel="noopener">
-        <span class="badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#041E42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span>
-        <span><h3>Resume</h3><p>Experience and leadership</p></span>
-      </a>
+    <div class="creds">
+      <a href="https://sites.google.com/view/kokladasistecertification/home" target="_blank" rel="noopener">ISTE certification portfolio</a>
+      <a href="https://sites.google.com/site/kokladas/teaching-certifications" target="_blank" rel="noopener">Degrees &amp; certifications</a>
+      <a href="https://sites.google.com/site/kokladas/research" target="_blank" rel="noopener">Research paper</a>
+      <a href="https://sites.google.com/site/kokladas/resume_1" target="_blank" rel="noopener">Full resume</a>
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- =================== FOOTER / CONTACT =================== -->
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-top">
       <div>
-        <h2>Let’s connect.</h2>
-        <p>Collaborations, speaking invitations, and professional learning partnerships.</p>
+        <h2>Let’s work together</h2>
+        <p>I welcome conversations about AI in schools, professional learning partnerships, speaking invitations, and collaboration.</p>
       </div>
       <div class="footer-actions">
         <a class="btn btn-gold" href="mailto:jkokladas@gmail.com">Email me</a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/jkokladas/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-line" href="https://www.linkedin.com/in/jkokladas" target="_blank" rel="noopener">Connect on LinkedIn</a>
       </div>
     </div>
     <div class="footer-bottom">
       <span>© <span id="year">2026</span> Jody Kokladas</span>
-      <span>Shady Side Academy, Pittsburgh, PA</span>
+      <span>Pittsburgh, Pennsylvania</span>
     </div>
   </div>
 </footer>
 
 <script>
-  // Mobile menu toggle
   const btn = document.querySelector('.menu-btn');
   const nav = document.getElementById('nav');
   btn.addEventListener('click', () => {
@@ -353,6 +495,7 @@ a.work-card:hover{border-color:var(--navy)}
   nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     nav.classList.remove('open');
     btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Open menu');
   }));
   document.getElementById('year').textContent = new Date().getFullYear();
 </script>
