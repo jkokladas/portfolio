@@ -171,7 +171,19 @@ section.alt{background:var(--bg-alt)}
 .award .medal svg{width:24px;height:24px;color:var(--navy)}
 .award h3{font-size:1.15rem}
 .award p{color:var(--muted);font-size:.95rem;margin-top:6px}
-.creds{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+.cta-cards{margin-top:28px;display:grid;grid-template-columns:1.4fr 1fr;gap:24px}
+.cta-card{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:32px 34px;border-radius:22px;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.cta-card:hover{transform:translateY(-3px);box-shadow:0 18px 36px -20px rgba(4,30,66,.55)}
+.cta-card strong{display:block;font-family:var(--display);font-weight:400;font-size:clamp(1.6rem,2.6vw,2.1rem);line-height:1.08}
+.cta-card .cta-sub{display:block;margin-top:8px;font-size:.98rem;line-height:1.45}
+.cta-card svg{width:30px;height:30px;flex:none}
+.cta-card.navy{background:var(--navy);color:#fff}
+.cta-card.navy .cta-sub{color:#C9D4E4}
+.cta-card.navy svg{color:var(--gold)}
+.cta-card.gold{background:var(--gold);color:var(--navy)}
+@media (prefers-color-scheme:dark){.cta-card.navy{background:#123A72}}
+@media (max-width:860px){.cta-cards{grid-template-columns:1fr}}
+.creds{margin-top:20px;display:flex;flex-wrap:wrap;gap:12px}
 .creds a{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);text-decoration:none;font-weight:500;font-size:15px}
 .creds a:hover{border-color:var(--gold)}
 
@@ -314,6 +326,7 @@ section.alt{background:var(--bg-alt)}
           <li>
             <h4>Academy-wide professional learning</h4>
             <p>PD programming for faculty and staff, including sessions on teaming and school culture.</p>
+            <div class="links"><a href="files/ssa-professional-development-overview.pdf" target="_blank" rel="noopener">PD grants overview</a></div>
           </li>
           <li>
             <h4>PAIS accreditation self-study, 2022–2024</h4>
@@ -371,7 +384,6 @@ section.alt{background:var(--bg-alt)}
         <h3>Director of Professional Development &amp; Instructional Design</h3>
         <p class="org">Shady Side Academy, Pittsburgh, PA</p>
         <p class="what">Leading AI literacy and integration, curricular alignment, faculty onboarding and mentoring, and professional learning across four PK–12 campuses. Advising faculty and staff on Benedum Professional Development Grants and Teaching Fellowships as part of the grant committee.</p>
-        <p class="what"><a href="files/ssa-professional-development-overview.pdf" target="_blank" rel="noopener">PD grants overview</a></p>
       </li>
       <li>
         <h3>Innovative Teaching &amp; Learning Lead</h3>
@@ -458,10 +470,18 @@ section.alt{background:var(--bg-alt)}
         <p>Cohort member, ISTE+ASCD.</p>
       </div>
     </div>
+    <div class="cta-cards">
+      <a class="cta-card navy" href="credentials.html">
+        <span><strong>Degrees, credentials &amp; affiliations</strong><span class="cta-sub">Degrees and licensure, certifications, affiliations, grants, and conference presentations</span></span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="cta-card gold" href="resume.html">
+        <span><strong>Full resume</strong><span class="cta-sub">View or download my complete resume</span></span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
     <div class="creds">
       <a href="https://sites.google.com/view/kokladasistecertification/home" target="_blank" rel="noopener">ISTE certification portfolio</a>
-      <a href="credentials.html">Degrees, credentials &amp; affiliations</a>
-      <a href="resume.html">Full resume</a>
     </div>
   </div>
 </section>
